@@ -1,6 +1,7 @@
 type ColumnProps = {
   title: string;
   headingColor: string;
+  Icon?: React.ComponentType;
   cards: CardType[];
   column: ColumnType;
   setCards: Dispatch<SetStateAction<CardType[]>>;

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { marcellus } from "@/fonts";
 
 export const metadata: Metadata = {
   title: "Mira",
@@ -12,9 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className='antialiased'
+        className={`${marcellus.className} antialiased scrollbar`}
       >
         {children}
       </body>
