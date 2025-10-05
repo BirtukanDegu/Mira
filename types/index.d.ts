@@ -15,6 +15,7 @@ type CardType = {
 };
 
 type CardProps = CardType & {
+    handleDragStart: Function;
 };
 
 type DropIndicatorProps = {
