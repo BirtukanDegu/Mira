@@ -9,7 +9,7 @@ const BurnBarrel = ({
 }) => {
   const [active, setActive] = useState(false);
 
-  const handleDragOver = (e: DragEvent) => {
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     setActive(true);
   };
@@ -18,7 +18,7 @@ const BurnBarrel = ({
     setActive(false);
   };
 
-  const handleDragEnd = (e: DragEvent) => {
+  const handleDragEnd = (e: React.DragEvent<HTMLDivElement>) => {
     const cardId = e.dataTransfer.getData("cardId");
 
     setCards((pv) => pv.filter((c) => c.id !== cardId));
