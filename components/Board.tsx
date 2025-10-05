@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Column from './Column';
 import { DEFAULT_CARDS } from '@/data';
+import BurnBarrel from './BurnBarrel';
 
 const Board = () => {
 
@@ -44,7 +45,8 @@ const Board = () => {
         headingColor="text-red-200"
         cards={cards}
         setCards={setCards}
-      />      
+      />
+      <BurnBarrel setCards={setCards} />      
     </div>
   )
 }

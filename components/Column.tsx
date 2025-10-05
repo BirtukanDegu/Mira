@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Card from "./Card";
+import { DropIndicator } from "./DropIndicator";
+import AddCard from "./AddCard";
 
 const Column = ({
   title,
@@ -27,6 +29,8 @@ const Column = ({
         {filteredCards.map((c) => {
           return <Card key={c.id} {...c} />;
         })}
+        <DropIndicator beforeId={null} column={column} />
+        <AddCard column={column} setCards={setCards} />
       </div>
     </div>
   );

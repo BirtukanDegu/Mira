@@ -16,3 +16,13 @@ type CardType = {
 
 type CardProps = CardType & {
 };
+
+type DropIndicatorProps = {
+  beforeId: string | null;
+  column: string;
+};
+
+type AddCardProps = {
+  column: ColumnType;
+  setCards: Dispatch<SetStateAction<CardType[]>>;
+};
