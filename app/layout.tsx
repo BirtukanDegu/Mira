@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { marcellus } from "@/fonts";
+import { ArchitectsDaughter } from "@/fonts";
 
 export const metadata: Metadata = {
   title: "Mira",
@@ -14,9 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${marcellus.className} antialiased scrollbar`}
-      >
+      <body className={`${ArchitectsDaughter.className} antialiased scrollbar`}>
         {children}
       </body>
     </html>

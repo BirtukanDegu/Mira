@@ -1,3 +1,3 @@
-import { Inconsolata } from 'next/font/google'
+import { Architects_Daughter } from 'next/font/google'
   
-export const marcellus = Inconsolata({ subsets : ['latin'], weight: ['400'] })
+export const ArchitectsDaughter  = Architects_Daughter({ subsets : ['latin'], weight: ['400'] })
