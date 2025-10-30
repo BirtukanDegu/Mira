@@ -29,7 +29,7 @@ const AddCard = ({ column, setCards }: AddCardProps) => {
           <textarea
             onChange={(e) => setText(e.target.value)}
             autoFocus
-            placeholder="Add new task..."
+            placeholder="Add new mood..."
             className="w-full rounded border border-accent/30 bg-accent/10 p-3 text-sm text-neutral-100 placeholder-accent/60 focus:outline-0 focus:ring-1 focus:ring-accent transition-colors scrollbar"
           />
           <div className="mt-1.5 flex items-center justify-end gap-1.5">
@@ -54,7 +54,7 @@ const AddCard = ({ column, setCards }: AddCardProps) => {
           onClick={() => setAdding(true)}
           className="flex w-full items-center gap-1.5 px-3 py-1.5 text-xs text-neutral-400 transition-colors hover:text-neutral-50 cursor-pointer"
         >
-          <span>Add card</span>
+          <span>Add mood</span>
           <FiPlus />
         </motion.button>
       )}
