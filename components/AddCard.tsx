@@ -1,9 +1,8 @@
-import React, { FormEvent, useState } from 'react'
-import { FiPlus } from 'react-icons/fi';
-import { motion } from 'framer-motion'
+import React, { FormEvent, useState } from "react";
+import { FiPlus } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const AddCard = ({ column, setCards }: AddCardProps) => {
-
   const [text, setText] = useState("");
   const [adding, setAdding] = useState(false);
 
@@ -18,11 +17,11 @@ const AddCard = ({ column, setCards }: AddCardProps) => {
       id: Math.random().toString(),
     };
 
-    setCards((pv:CardType[]) => [...pv, newCard]);
+    setCards((pv: CardType[]) => [...pv, newCard]);
 
-    setAdding(false);    
-  }
-    
+    setAdding(false);
+  };
+
   return (
     <>
       {adding ? (
@@ -30,7 +29,7 @@ const AddCard = ({ column, setCards }: AddCardProps) => {
           <textarea
             onChange={(e) => setText(e.target.value)}
             autoFocus
-            placeholder="Add new task..."
+            placeholder="Add new mood..."
             className="w-full rounded border border-pink-400 bg-pink-400/20 p-3 text-sm text-neutral-50 placeholder-pink-300 focus:outline-0"
           />
           <div className="mt-1.5 flex items-center justify-end gap-1.5">
@@ -55,12 +54,12 @@ const AddCard = ({ column, setCards }: AddCardProps) => {
           onClick={() => setAdding(true)}
           className="flex w-full items-center gap-1.5 px-3 py-1.5 text-xs text-neutral-400 transition-colors hover:text-neutral-50"
         >
-          <span>Add card</span>
+          <span>Add mood</span>
           <FiPlus />
         </motion.button>
       )}
     </>
-  )
-}
+  );
+};
 
-export default AddCard
+export default AddCard;
